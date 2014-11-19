@@ -24,8 +24,8 @@ class PredictionNetwork(SupervisedNeuralNetwork):
         # Create layers and bias unit
         input_layer = LinearLayer(5)
         hidden_layer = SigmoidLayer(hidden_layer_size)
-        # output_layer = SigmoidLayer(1)
-        output_layer = LinearLayer(1)
+        output_layer = SigmoidLayer(1)
+        # output_layer = LinearLayer(1)
         bias = BiasUnit()
         # Create connections
         input_to_hidden = FullConnection(input_layer, hidden_layer)
